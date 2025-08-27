@@ -45,7 +45,7 @@ graph TD
         A[User's Browser]
     end
 
-    subgraph "Frontend (Next.js on Vercel/Firebase Hosting)"
+    subgraph "Frontend (Firebase Hosting)"
         B[Next.js App]
     end
 
@@ -56,7 +56,7 @@ graph TD
         F[Cloud Functions]
     end
 
-    subgraph "AI Microservice (Python on Google Cloud Run)"
+    subgraph "AI Microservice (GCP)"
         G[Docker Container]
         H[Flask/FastAPI Server]
         I[Audio Transcription Model]
