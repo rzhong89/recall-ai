@@ -13,7 +13,7 @@ Recall AI is a full-stack web application that automates the creation of flashca
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Live Demo](#live-demo)
+- [Demo](#demo)
 - [Architecture](#architecture)
 - [Key Features](#key-features)
 - [Tech Stack & Rationale](#tech-stack--rationale)
@@ -26,9 +26,9 @@ Recall AI is a full-stack web application that automates the creation of flashca
 
 ## Project Overview
 
-This project solves the time-consuming problem of manual flashcard creation. It provides a platform where students and professionals can upload their learning materials and receive flashcard decks in minutes, ready to export to anki, quizlet, and more. The application is built on a modern, scalable, and distributed architecture, combining a Next.js frontend, a serverless Firebase backend, and a containerized Python AI microservice.
+This project solves the time-consuming problem of manual flashcard creation. It provides a platform where students and professionals can upload their learning materials and receive ready-to-study flashcard decks in minutes. The application is built on a modern, scalable, and distributed architecture, combining a Next.js frontend, a serverless Firebase backend, and a containerized Python AI microservice.
 
-## Live Demo
+## Demo
 
 **[Link to your live application here]**
 
@@ -45,18 +45,18 @@ graph TD
         A[User's Browser]
     end
 
-    subgraph Frontend (Next.js on Vercel/Firebase Hosting)
+    subgraph "Frontend (Next.js on Vercel/Firebase Hosting)"
         B[Next.js App]
     end
 
-    subgraph Serverless Backend (Firebase)
+    subgraph "Serverless Backend (Firebase)"
         C[Firebase Authentication]
         D[Firebase Storage]
         E[Firestore Database]
         F[Cloud Functions]
     end
 
-    subgraph AI Microservice (Python on Google Cloud Run)
+    subgraph "AI Microservice (Python on Google Cloud Run)"
         G[Docker Container]
         H[Flask/FastAPI Server]
         I[Audio Transcription Model]
