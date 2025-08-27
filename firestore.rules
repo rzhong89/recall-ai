@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow authenticated users to read/write their own decks and cards
+    match /decks/{deckId} {
+      allow read, write, create, update, delete: if request.auth != null && 
+        (resource == null || resource.data.userId == request.auth.uid);
+      
+      match /cards/{cardId} {
+        allow read, write, create, update, delete: if request.auth != null;
+      }
+    }
+  }
+}
